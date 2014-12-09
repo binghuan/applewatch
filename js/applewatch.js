@@ -18,10 +18,6 @@ $$(document).ready(function(){
          $('.carousel').carousel('pause')
 	});
 
-   $toucharea.on('swipe', function(e){
-         console.log(new Date(),'swipe');
-   });
-
 	$toucharea.on('swipeDown', function(e){
    		console.log(new Date(),'swipeDown', e.touch.delta.x, e.touch.delta.y);
 
