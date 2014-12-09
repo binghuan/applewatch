@@ -4,16 +4,31 @@ $$(document).ready(function(){
 
 	$toucharea.on('swipeUp', function(e){
    		console.log(new Date(),'swipeUp');
+
+         // Method 1
+         /*
    		$("#view_homescreen").hide();
-   		//$("#view_homescreen").fadeOut();
    		$("#view_glaces").show();
    		$('.carousel').carousel('pause')
+         */
+
+         // Method 2
+         $("#view_homescreen").slideUp();
+         $('#view_glaces').show('slide', {direction: 'down'});
+         $('.carousel').carousel('pause')
 	});
 
 	$toucharea.on('swipeDown', function(e){
    		console.log(new Date(),'swipeDown');
-   		$("#view_homescreen").show();
-   		$("#view_glaces").hide();
+         // Method 1
+   		//$("#view_homescreen").show();
+   		//$("#view_glaces").hide();
+
+         // Method 2
+         $("#view_homescreen").slideDown();
+         $("#view_glaces").animate({top:'390px'});
+         $("#view_glaces").hide();
+         $("#view_glaces").animate({top:'0px'});
 	});
 
 	$toucharea.on('swipeLeft', function(e){
