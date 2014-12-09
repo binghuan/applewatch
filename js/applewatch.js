@@ -27,4 +27,11 @@ $$(document).ready(function(){
    		$('.carousel').carousel('prev')
    		$('.carousel').carousel('pause')
 	});
+
+   $toucharea.on('hold', function(e){
+         console.log(new Date(),'hold');
+         //$("#view_homescreen").show();
+         //$("#view_glaces").hide();
+         $("#view_homescreen").animate({width: "80%", height: "80%"}, 'slow');
+   });
 });
