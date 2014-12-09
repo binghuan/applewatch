@@ -18,8 +18,16 @@ $$(document).ready(function(){
          $('.carousel').carousel('pause')
 	});
 
+   $toucharea.on('swipe', function(e){
+         console.log(new Date(),'swipe');
+   });
+
 	$toucharea.on('swipeDown', function(e){
-   		console.log(new Date(),'swipeDown');
+   		console.log(new Date(),'swipeDown', e.touch.delta.x, e.touch.delta.y);
+
+         if(e.touch.delta.y < 30) {
+            return false;
+         }
          // Method 1
    		//$("#view_homescreen").show();
    		//$("#view_glaces").hide();
