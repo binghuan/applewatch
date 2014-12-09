@@ -32,6 +32,6 @@ $$(document).ready(function(){
          console.log(new Date(),'hold');
          //$("#view_homescreen").show();
          //$("#view_glaces").hide();
-         $("#view_homescreen").animate({width: "80%", height: "80%"}, 'slow');
+         //$("#view_homescreen").animate({width: "80%", height: "80%"}, 'slow');
    });
 });
