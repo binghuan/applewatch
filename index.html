@@ -29,6 +29,7 @@
     <![endif]-->
 
 	<style>
+		/*
 		.backgroundImg {
 			background-image: url(images/Black_AppleWatch_with_NO-Screen.png);
 			background-repeat: no-repeat;
@@ -36,6 +37,7 @@
     		width:500px;
     		height: 500px;
 		}
+		*/
 
 
 		img {
@@ -44,7 +46,9 @@
     		user-drag: none;
 			-moz-user-select: none;
 			-webkit-user-drag: none;
- 			vertical-align : middle;
+			text-align: center;
+    		display: table-cell;
+    		vertical-align: middle;
 		}
 
 
@@ -67,7 +71,10 @@
 
 	<div id='toucharea' style='height:390px;width:321px;'>
 		<!--<img id='view_customization' src='images/pic_home.png'>-->
+
+		<!--<div id='view_customization'></div>-->
 		<img id='view_homescreen' src='images/pic_home.png'>
+		<div style="position:absolute;left:0px;top:0px;right:0px;bottom:0px;z-index:1000"></div>
 		<div id="view_glaces" class="carousel slide" data-ride="carousel" style='display:none'>
 
 			<!-- Indicators -->
